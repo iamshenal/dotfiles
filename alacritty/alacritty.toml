@@ -1,0 +1,9 @@
+[window]
+padding.x = 10
+padding.y = 10
+
+decorations = "ButtonLess"
+
+[font]
+normal.family = "JetBrainsMono Nerd Font Mono"
+size = 14

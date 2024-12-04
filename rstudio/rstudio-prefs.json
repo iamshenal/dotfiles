@@ -1,0 +1,8 @@
+{
+    "initial_working_directory": "~",
+    "editor_keybindings": "vim",
+    "posix_terminal_shell": "bash",
+    "default_project_location": "~/BA",
+    "relative_line_numbers": true,
+    "editor_theme": "Cobalt"
+}
