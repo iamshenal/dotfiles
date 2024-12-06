@@ -1,3 +1,5 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+-- some keymaps will be here
+local set = vim.keymap.set
+set("n", "H", ":bprev<CR>")
+set("n", "L", ":bnext<CR>")
+set("n", "<C-x>", ":bdelete<CR>")

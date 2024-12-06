@@ -1,9 +1,6 @@
 {
-    "diagnostics.globals": [
-        "local",
-        "set"
-    ],
     "diagnostics.disable": [
-        "missing-fields"
+        "missing-fields",
+        "unused-local"
     ]
 }
