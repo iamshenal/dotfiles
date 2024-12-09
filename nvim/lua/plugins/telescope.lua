@@ -16,4 +16,18 @@ return {
 		{ "<leader>fg", ":Telescope live_grep<CR>", silent = true, desc = "Live Grep" },
 		{ "<leader>fk", ":Telescope keymaps<CR>", silent = true, desc = "Find Keymaps" },
 	},
+	config = function()
+		local actions = require("telescope.actions")
+		require("telescope").setup({
+			defaults = {
+				mappings = {
+					i = {
+						["<C-k>"] = actions.move_selection_previous,
+						["<C-j>"] = actions.move_selection_next,
+						["<C-d>"] = actions.delete_buffer,
+					},
+				},
+			},
+		})
+	end,
 }
