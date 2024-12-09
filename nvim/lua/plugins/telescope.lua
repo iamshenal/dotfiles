@@ -15,19 +15,7 @@ return {
 		{ "<leader>fb", ":Telescope buffers<CR>", silent = true, desc = "Find Buffers" },
 		{ "<leader>fg", ":Telescope live_grep<CR>", silent = true, desc = "Live Grep" },
 		{ "<leader>fk", ":Telescope keymaps<CR>", silent = true, desc = "Find Keymaps" },
+		{ "<leader>fq", ":Telescope quickfix<CR>", silent = true, desc = "Find Quickfix" },
 	},
-	config = function()
-		local actions = require("telescope.actions")
-		require("telescope").setup({
-			defaults = {
-				mappings = {
-					i = {
-						["<C-k>"] = actions.move_selection_previous,
-						["<C-j>"] = actions.move_selection_next,
-						["<C-d>"] = actions.delete_buffer,
-					},
-				},
-			},
-		})
-	end,
+	config = function() end,
 }
