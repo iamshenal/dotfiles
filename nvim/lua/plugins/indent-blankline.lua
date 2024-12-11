@@ -36,9 +36,6 @@ return {
 				scope = { enabled = false },
 				exclude = {
 					filetypes = {
-						"help",
-						"lazy",
-						"mason",
 						"notify",
 						"oil",
 					},

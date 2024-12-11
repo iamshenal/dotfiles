@@ -20,6 +20,7 @@ return {
 				"typescript",
 				"tsx",
 				"yaml",
+				"go",
 				"html",
 				"css",
 				"prisma",

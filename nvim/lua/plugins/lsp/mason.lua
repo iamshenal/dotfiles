@@ -29,6 +29,7 @@ return {
 			ensure_installed = {
 				"vtsls",
 				"html",
+				"gopls",
 				"cssls",
 				"tailwindcss",
 				"svelte",
@@ -42,6 +43,7 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"gofumpt",
 				"prettierd", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter

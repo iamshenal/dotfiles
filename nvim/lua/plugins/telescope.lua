@@ -16,6 +16,7 @@ return {
 		{ "<leader>fg", ":Telescope live_grep<CR>", silent = true, desc = "Live Grep" },
 		{ "<leader>fk", ":Telescope keymaps<CR>", silent = true, desc = "Find Keymaps" },
 		{ "<leader>fq", ":Telescope quickfix<CR>", silent = true, desc = "Find Quickfix" },
+		{ "<leader>fc", ":e ~/.config/nvim/lua/<CR>", silent = true, desc = "Configuration" },
 	},
 	config = function() end,
 }
