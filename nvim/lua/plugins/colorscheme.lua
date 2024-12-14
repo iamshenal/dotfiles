@@ -21,7 +21,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
-				flavour = "macchiato", -- latte, frappe, macchiato, mocha
+				flavour = "mocha", -- latte, frappe, macchiato, mocha
 				background = { -- :h background
 					light = "latte",
 					dark = "mocha",
@@ -82,7 +82,7 @@ return {
 		-- you n set set configuration options here
 		config = function()
 			vim.g.italic_comments = false
-			-- vim.cmd.colorscheme("duckbones")
+			-- vim.cmd.colorscheme("zenbones")
 		end,
 	},
 	--kanagawwa
