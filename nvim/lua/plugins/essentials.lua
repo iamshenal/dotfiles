@@ -12,12 +12,4 @@ return {
 	{
 		"norcalli/nvim-colorizer.lua",
 	},
-
-	-- undo-tree
-	{
-		"mbbill/undotree",
-		config = function()
-			vim.keymap.set("n", "<leader>UU", vim.cmd.UndotreeToggle)
-		end,
-	},
 }

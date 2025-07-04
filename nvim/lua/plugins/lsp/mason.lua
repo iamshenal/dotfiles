@@ -45,7 +45,6 @@ return {
 			ensure_installed = {
 				"gofumpt",
 				"prettierd", -- prettier formatter
-				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter

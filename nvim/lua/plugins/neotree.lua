@@ -8,7 +8,7 @@ return {
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 	keys = {
-		{ "<leader>e", ":Neotree toggle right<CR>", silent = true, desc = "File Explorer" },
+		{ "<leader>e", ":Neotree toggle left<CR>", silent = true, desc = "File Explorer" },
 	},
 
 	config = function()
