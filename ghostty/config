@@ -1,0 +1,7 @@
+theme = vesper
+font-size = 14.5
+font-family = "FiraCode Nerd Font"
+font-style-italic = false
+font-style-bold-italic = false
+font-synthetic-style = "no-italic,no-bold-italic"
+
