@@ -22,6 +22,10 @@ return {
 
 		local lspkind = require("lspkind")
 
+		vim.diagnostic.config({
+			float = { border = "rounded" },
+		})
+
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -30,8 +34,16 @@ return {
 				completeopt = "menu,menuone,preview,noselect",
 			},
 			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
+				completion = {
+					scrollbar = false,
+					border = "rounded",
+					winhighlight = "Normal:CmpNormal",
+				},
+				documentation = {
+					scrollbar = false,
+					border = "rounded",
+					winhighlight = "Normal:CmpNormal",
+				},
 			},
 			snippet = { -- configure how nvim-cmp interacts with snippet engine
 				expand = function(args)
