@@ -13,6 +13,13 @@ return {
 
 	config = function()
 		require("neo-tree").setup({
+			filesystem = {
+				filtered_items = {
+					visible = true, -- Show hidden files
+					hide_dotfiles = false, -- Don't hide files starting with .
+					hide_gitignored = false, -- Optional: Show .gitignored files too
+				},
+			},
 			window = {
 				position = "left",
 			},

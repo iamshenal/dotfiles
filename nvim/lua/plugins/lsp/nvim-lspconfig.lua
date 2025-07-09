@@ -8,10 +8,7 @@ return {
 	},
 	config = function()
 		-- Specify how the border looks like
-		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-			border = "rounded",
-		})
-		-- Add the border (handlers) to the lua language server
+		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }) -- Add the border (handlers) to the lua language server
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 
@@ -112,6 +109,11 @@ return {
 					filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 				})
 			end,
+			-- prismaa
+			require("lspconfig").prismals.setup({
+				capabilities = capabilities,
+			}),
+
 			["emmet_ls"] = function()
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({
