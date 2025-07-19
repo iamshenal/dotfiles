@@ -15,6 +15,7 @@ opt.wrap = true
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
+opt.guicursor = ""
 opt.cursorline = true
 opt.colorcolumn = "100"
 opt.termguicolors = true

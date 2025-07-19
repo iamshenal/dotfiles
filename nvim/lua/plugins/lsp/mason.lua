@@ -1,5 +1,6 @@
 return {
 	"williamboman/mason.nvim",
+	lazy = false,
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -17,9 +18,9 @@ return {
 		mason.setup({
 			ui = {
 				icons = {
-					-- package_installed = "✓",
-					-- package_pending = "➜",
-					-- package_uninstalled = "✗",
+					package_installed = "✓",
+					package_pending = "➜",
+					package_uninstalled = "✗",
 				},
 			},
 		})

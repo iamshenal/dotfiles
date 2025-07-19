@@ -23,8 +23,26 @@ return {
 
 		local lspkind = require("lspkind")
 
+		local cmp_active = true
+
 		vim.diagnostic.config({
 			float = { border = "rounded" },
+			virtual_text = {
+				prefix = "",
+				spacing = 2,
+				source = "if_many",
+			},
+			signs = {
+				text = {
+					[vim.diagnostic.severity.ERROR] = "",
+					[vim.diagnostic.severity.WARN] = "",
+					[vim.diagnostic.severity.INFO] = "",
+					[vim.diagnostic.severity.HINT] = "󰌵",
+				},
+			},
+			underline = true,
+			update_in_insert = false,
+			severity_sort = true,
 		})
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
@@ -56,7 +74,7 @@ return {
 				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
-				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
+				["<C-t"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-q>"] = cmp.mapping.abort(), -- close completion window
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 				["<Tab>"] = cmp.mapping.confirm({ select = true }),
@@ -66,7 +84,14 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
-				{ name = "path" }, -- file system paths
+				{
+					name = "path",
+					option = {
+						pathMappings = {
+							["@"] = "${folder}/src",
+						},
+					},
+				}, -- file system paths
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu
