@@ -81,9 +81,10 @@ return {
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" }, -- snippets
-				{ name = "buffer" }, -- text within current buffer
+				{ name = "nvim_lsp", prority = 1000 },
+				{ name = "luasnip", prority = 750 }, -- snippets
+				{ name = "buffer", prority = 500 }, -- text within current buffer
+				{ name = "path", prority = 250 }, -- text within current buffer
 				{
 					name = "path",
 					option = {
@@ -92,6 +93,14 @@ return {
 						},
 					},
 				}, -- file system paths
+			}),
+			cmp.setup.filetype({ "javascriptreact", "typescriptreact" }, {
+				sources = cmp.config.sources({
+					{ name = "nvim_lsp", priority = 2000 }, -- force LSP above snippets
+					{ name = "luasnip", priority = 500 },
+					{ name = "buffer", priority = 250 },
+					{ name = "path", priority = 100 },
+				}),
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu

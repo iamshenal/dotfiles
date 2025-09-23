@@ -3,6 +3,7 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.number = true
 opt.scrolloff = 999
+opt.winborder = "rounded"
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
@@ -15,7 +16,6 @@ opt.wrap = true
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
-opt.guicursor = ""
 opt.cursorline = true
 opt.colorcolumn = "100"
 opt.termguicolors = true
