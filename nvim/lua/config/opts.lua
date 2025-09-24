@@ -4,6 +4,7 @@ opt.relativenumber = true
 opt.number = true
 opt.scrolloff = 999
 opt.winborder = "rounded"
+vim.opt.autochdir = false
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
